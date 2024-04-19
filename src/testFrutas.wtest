@@ -1,0 +1,24 @@
+import frutas.*
+test "Manzana"{
+	
+	assert.equals(5, manzana.energiaQueOtorga())
+	manzana.modificarPropiedades()
+	assert.equals(14, manzana.energiaQueOtorga())
+	manzana.estadoDeMaduracion(verde)
+	assert.equals(7, manzana.energiaQueOtorga())
+
+}
+
+test "Mandarina"{
+	assert.equals(12, mandarina.energiaQueOtorga())
+	mandarina.modificarPropiedades()
+	assert.equals(54, mandarina.gramos())
+	assert.equals(10.8, mandarina.energiaQueOtorga())
+}
+
+test "Otros"{
+	assert.equals(5, banana.energiaQueOtorga())
+	banana.modificarPropiedades()
+	assert.equals(0, agua.energiaQueOtorga())
+	agua.modificarPropiedades()
+}

@@ -1,0 +1,53 @@
+import personajes.*
+import frutas.*
+import juegos.*
+
+test "Martin" {
+
+	martin.comprar(manzana)
+	assert.equals(manzana, martin.enLaDespensa())
+	martin.alimentarse()
+	assert.equals(agua, martin.enLaDespensa())
+	martin.alimentarse()
+	assert.equals(agua, martin.enLaDespensa())
+	martin.practicar(basket)
+	assert.that(martin.tieneHambre())
+	assert.notThat(martin.estaFeliz())
+	martin.comprar(manzana)
+	martin.nuevoDia()
+	assert.equals(14, manzana.energiaQueOtorga())
+	martin.practicar(basket)
+	martin.practicar(basket)
+	martin.practicar(basket)
+	martin.practicar(basket)
+	assert.notThat(martin.estaFeliz())
+	martin.alimentarse()
+	assert.that(martin.estaFeliz())
+	
+	
+
+}
+
+test "Maria"{
+	assert.equals(14, maria.amuleto())
+	assert.equals(214, maria.energia())
+	assert.that(maria.estaFeliz())
+	maria.cambiar(verde)
+	assert.equals(7, maria.amuleto())
+	maria.practicar(basket)
+	maria.practicar(basket)
+	maria.practicar(basket)
+	maria.practicar(basket)
+	assert.notThat(maria.estaFeliz())
+}
+
+test "Carlos"{
+	assert.equals(0, carlos.energia())
+	carlos.modificarEstado()
+	assert.equals(391, carlos.energia())
+}
+
+test "Mario"{
+	assert.equals(192.5, mario.energia())
+}
+

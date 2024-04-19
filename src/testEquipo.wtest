@@ -1,0 +1,18 @@
+import equipo.*
+import personajes.*
+
+test "Equipo" {
+
+	equipo.rotarPosiciones()
+	assert.equals(pepe, equipo.jugadorDerecho())
+	assert.equals(maria, equipo.jugadorIzquierdo())
+	equipo.incorporarNuevo(luis)
+	assert.equals(luis, equipo.directorTecnico())
+	assert.equals(391 / 3, equipo.promedioDeEnergia())
+	assert.that(equipo.todosFelices())
+	carlos.modificarEstado()
+	equipo.jugadorDerecho(carlos)
+	assert.equals(705 / 3, equipo.promedioDeEnergia())
+	assert.notThat(equipo.todosFelices())
+
+}

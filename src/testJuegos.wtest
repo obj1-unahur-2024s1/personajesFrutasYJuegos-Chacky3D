@@ -1,0 +1,23 @@
+import juegos.*
+
+test "Voley" {
+
+	assert.equals(-20, voley.practicarDeporte())
+	voley.cantidadDeMinutos(20)
+	assert.equals(-40, voley.practicarDeporte())
+
+}
+
+test "Futbol"{
+	assert.equals(-10, futbol.practicarDeporte())
+}
+
+test "Aerobic"{
+	assert.equals(50, aerobic.practicarDeporte())
+	aerobic.temperatura(30)
+	assert.equals(75, aerobic.practicarDeporte())
+}
+
+test "Basket"{
+	assert.equals(-50, basket.practicarDeporte())
+}
